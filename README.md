@@ -1,4 +1,4 @@
-##Базовые настройки ОС Ubuntu 20.04
+## Базовые настройки ОС Ubuntu 20.04
 
 - sudo apt install lamp-server^
 - sudo -i
@@ -15,18 +15,19 @@
 
 
 
-###Конфигурация сервера Apache
+### Конфигурация сервера Apache
 
 - sudo nano /etc/hosts
-    >   127.0.1.1	website
+    ```127.0.1.1	website```
 - cd /etc/apache2/sites-available/
 - sudo cp 000-default.conf website.conf
 - sudo nano website.conf
-	>   ServerName website
-	>	DocumentRoot /var/www/html/website/
-	>	<Directory /var/www/html>
-	>	AllowOverride All
-	>	<\/Directory>
+	> ```ServerName website```
+	> ```DocumentRoot /var/www/html/website/```
+	> ```<Directory /var/www/html>```
+	> ```   AllowOverride All```
+	> ```</Directory>```
+
 
 - sudo a2ensite website.conf
 - systemctl reload apache2
