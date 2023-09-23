@@ -17,16 +17,17 @@
 
 ### Конфигурация сервера Apache
 
-- sudo nano /etc/hosts
-    ```127.0.1.1	website```
+- sudo nano /etc/hosts  
+    >```127.0.1.1	website```
 - cd /etc/apache2/sites-available/
 - sudo cp 000-default.conf website.conf
-- sudo nano website.conf
-	> ```ServerName website```
-	> ```DocumentRoot /var/www/html/website/```
-	> ```<Directory /var/www/html>```
-	> ```   AllowOverride All```
-	> ```</Directory>```
+- sudo nano website.conf  
+
+	>```ServerName website```  
+	>```DocumentRoot /var/www/html/website/```  
+	>```<Directory /var/www/html>```  
+	>```   AllowOverride All```  
+	>```</Directory>```
 
 
 - sudo a2ensite website.conf
